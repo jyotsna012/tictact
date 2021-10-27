@@ -6,7 +6,6 @@
 using namespace std;
 
 void printBoard(char array[3][3]);
-void resetBoard(char *array);
 
 int main(){
 
@@ -19,24 +18,9 @@ int main(){
   };
 
  printBoard(array);
- resetBoard(array);
-
  
 };
 
-void resetBoard(char *array){
- 
-  char array[3][3] = {
-
-    {'_','_','_'},
-    {'_','_','_'},
-    {'_','_','_'}
-  
-  };
-  
-  //printBoard(array);
-
-}
 
 void printBoard(char array[3][3]){
 
