@@ -12,15 +12,25 @@ int main(){
 
   char array[3][3] = {
 
-    {'1','1','1'},
-    {'_','_','1'},
-    {'_','_','1'}
+    {'_','_','_'},
+    {'_','_','_'},
+    {'_','_','_'}
   
   };
-
- printBoard(array);
+  
  reset(array);
- 
+ cout << "Welcome to Tic Tac Toe. Player one will be X, and Player 2 will by O" << endl;
+ cout << "You will enter where to place your letter based on the following format" << endl;
+ cout << "Row 1 = 1, Row 2 = 2, Row 3 = 3" << endl;
+ cout << "Col 1 = a, Col 2 = b, Col 3 = c" << endl;
+ cout << "Please enter which row you want to place your move (1,2,3)" << end;
+ char x = 0;
+ char y = 0;
+ cin >> x;
+ cout << "Please enter which column you want to place your move (a,b,c)" << end;
+ cin >> y;
+ array[x-1][y-1] = 'X';
+  
 };
 
 void reset(char array[3][3]){
