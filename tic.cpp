@@ -29,7 +29,7 @@ int main(){
  cin >> x;
  cout << "Please enter which column you want to place your move (a,b,c)" << endl;
  cin >> y;
- array[x-1][y-1] = 'X';
+ array[x-1][y-1] = 'x';
  cout << array[x-1][y-1] << endl;
  for(int i = 0; i < 3; i++){
    for(int j = 0; j < 3; j++){
