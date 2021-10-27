@@ -16,7 +16,7 @@ int main(){
   for(int i = 0; i < 3; i++){
     arrPtr[i] = new char[3];
     for(int j = 0; j < 3; j++){
-      arrPtr[i][j] = '_';
+      arrPtr[i][j] = 'a';
     }
   }
   printPointer(arrPtr);
