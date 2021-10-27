@@ -6,6 +6,7 @@
 using namespace std;
 
 void printBoard(char array[3][3]);
+void reset(char array[3][3]);
 
 int main(){
 
@@ -18,6 +19,7 @@ int main(){
   };
 
  printBoard(array);
+ reset(Array);
  
 };
 
@@ -28,6 +30,10 @@ void reset(char array[3][3]){
         array[i][j] = '_';
     }
   }
+  
+  printBoard(array);
+   
+  return;
 
 }
 
