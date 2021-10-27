@@ -17,15 +17,20 @@ int main(){
     {'_','_','_'}
 
   };
-  
- //reset(array);
+ printBoard((char*)array,3,3);
  cout << "Welcome to Tic Tac Toe. Player one will be X, and Player 2 will by O" << endl;
  cout << "You will enter where to place your letter based on the following format" << endl;
  cout << "Row 1 = 1, Row 2 = 2, Row 3 = 3" << endl;
  cout << "Col 1 = a, Col 2 = b, Col 3 = c" << endl;
- playX(array);
- playO(array);
+ cout << "Please enter which row you want to place your move (1,2,3)" << endl;
+ char x = 0;
+ char y = 0;
+ cin >> x;
+ cout << "Please enter which column you want to place your move (a,b,c)" << endl;
+ cin >> y;
+ array[x-1][y-1] = 'x';
  printBoard((char*)array,3,3);
+  
 };
 
 void playX(char array[3][3]){  
