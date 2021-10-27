@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void printBoard(char array[3][3]);
+void printBoard(char * array, int r, int c);
 void reset(char array[3][3]);
 
 int main(){
