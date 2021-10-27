@@ -5,20 +5,33 @@
 
 using namespace std;
 
-void printBoard(char * array, int r, int c);
-void reset(char array[3][3]);
+/*void printBoard(char * array, int r, int c);
+void reset(char array[3][3]);*/
+
+void printPointer(char** arrPtrParam);
 
 int main(){
-
-  char array[3][3] = {
+  
+  char** arrPtr = new int*[3];
+  for(int i = 0; i < 3; i++){
+    arrPtr[i] = new int[3]
+    for(int j = 0; j < 3; j++){
+      arrPtr[i][j] = '_';
+    }
+  }
+  printPointer(arrPtr);
+  
+  /*char array[3][3] = {
 
     {'_','_','_'},
     {'_','_','_'},
     {'_','_','_'}
 
-  };
- printBoard((char*)array,3,3);
- cout << "Welcome to Tic Tac Toe. Player one will be X, and Player 2 will by O" << endl;
+  };*/
+  
+  
+  
+ /*cout << "Welcome to Tic Tac Toe. Player one will be X, and Player 2 will by O" << endl;
  cout << "You will enter where to place your letter based on the following format" << endl;
  cout << "Row 1 = 1, Row 2 = 2, Row 3 = 3" << endl;
  cout << "Col 1 = a, Col 2 = b, Col 3 = c" << endl;
@@ -28,12 +41,36 @@ int main(){
  cin >> x;
  cout << "Please enter which column you want to place your move (a,b,c)" << endl;
  cin >> y;
- array[x-1][y-1] = 'x';
- printBoard((char*)array,3,3);
+ array[x-1][y-1] = 'x';*/
+ 
   
 };
 
-void playX(char array[3][3]){  
+void printPointer(char** arrPtrParam) {
+for (int a = 0; a < 3; a++) {
+	    for (int b = 0; b < 3; b++) {
+	      arrPtrParam[a][b] += 100;
+	      cout << arrPtrParam[a][b] << " ";
+	   }
+	    cout << endl;
+	 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*void playX(char array[3][3]){  
  cout << "Please enter which row you want to place your move (1,2,3)" << endl;
  char x = 0;
  char y = 0;
@@ -72,4 +109,5 @@ void printBoard(char * array, int r, int c){
   }
   cout << "-----------------------" << endl;
   return;
-}
+} */
+
