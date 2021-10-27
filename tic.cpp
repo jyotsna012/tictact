@@ -6,7 +6,7 @@
 using namespace std;
 
 void printBoard(char array[3][3]);
-void resetBoard(char & array[3][3]);
+void resetBoard(char (&array)[3][3]);
 
 int main(){
 
@@ -24,7 +24,7 @@ int main(){
  
 };
 
-void resetBoard(char & array[3][3]){
+void resetBoard(char (&array)[3][3]){
  
   char array[3][3] = {
 
