@@ -5,11 +5,12 @@
 
 using namespace std;
 
-char array[3][3] = { '1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9' };
+char array[3][3] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 char player = 'X';
+
 void Draw()
 {
-	system("cls");
+	//system("cls");
 	cout << "Tic Tac Toe v1.0" << endl;
 	for (int i = 0; i < 3; i++)
 	{
@@ -115,6 +116,5 @@ int main()
 		}
 		TogglePlayer();
 	}
-	system("pause");
 	return 0;
 }
