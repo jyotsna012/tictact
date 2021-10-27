@@ -59,7 +59,7 @@ void reset(char array[3][3]){
         array[i][j] = '_';
     }
   }
-  printBoard(array);
+  //printBoard(array);
   return;
 }
 
