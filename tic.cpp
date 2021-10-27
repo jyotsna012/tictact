@@ -34,7 +34,7 @@ void resetBoard(char *array){
   
   };
   
-  void printBoard(char array[3][3]);
+  printBoard(array);
 
 }
 
