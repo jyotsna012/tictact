@@ -19,7 +19,7 @@ int main(){
   };
 
  printBoard(array);
- reset(Array);
+ reset(array);
  
 };
 
