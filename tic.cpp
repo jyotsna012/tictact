@@ -46,6 +46,9 @@ void printBoard(char array[3][3]){
     }
     cout << endl;
   }
+  
+  cout << "-----------------------" << endl;
+
 
   return;
 }
