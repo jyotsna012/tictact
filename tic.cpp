@@ -30,6 +30,7 @@ int main(){
  cout << "Please enter which column you want to place your move (a,b,c)" << endl;
  cin >> y;
  array[x-1][y-1] = 'X';
+ cout << array[x-1][y-1] << endl;
  printBoard(array);
   
 };
