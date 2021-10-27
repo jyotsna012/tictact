@@ -6,9 +6,26 @@
 using namespace std;
 
 void printBoard(char array[3][3]);
+void resetBoard(char & array[3][3]);
 
 int main(){
 
+  char array[3][3] = {
+
+    {'1','1','1'},
+    {'_','_','1'},
+    {'_','_','1'}
+  
+  };
+
+ printBoard(array);
+ resetBoard(array);
+
+ 
+};
+
+void resetBoard(char & array[3][3]){
+ 
   char array[3][3] = {
 
     {'_','_','_'},
@@ -16,15 +33,10 @@ int main(){
     {'_','_','_'}
   
   };
+  
+  void printBoard(char array[3][3]);
 
- array[0][1] = 'a';
- 
- char a = array[0][1];
-
- cout << a << endl;
- printBoard(array);
- 
-};
+}
 
 void printBoard(char array[3][3]){
 
