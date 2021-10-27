@@ -12,9 +12,9 @@ void printPointer(char** arrPtrParam);
 
 int main(){
   
-  char** arrPtr = new int*[3];
+  char** arrPtr = new char*[3];
   for(int i = 0; i < 3; i++){
-    arrPtr[i] = new int[3]
+    arrPtr[i] = new char[3]
     for(int j = 0; j < 3; j++){
       arrPtr[i][j] = '_';
     }
