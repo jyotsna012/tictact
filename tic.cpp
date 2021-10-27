@@ -23,6 +23,10 @@ int main(){
  cout << "You will enter where to place your letter based on the following format" << endl;
  cout << "Row 1 = 1, Row 2 = 2, Row 3 = 3" << endl;
  cout << "Col 1 = a, Col 2 = b, Col 3 = c" << endl;
+ 
+};
+
+void playX(char array[3][3]){  
  cout << "Please enter which row you want to place your move (1,2,3)" << endl;
  char x = 0;
  char y = 0;
@@ -30,15 +34,17 @@ int main(){
  cout << "Please enter which column you want to place your move (a,b,c)" << endl;
  cin >> y;
  array[x-1][y-1] = 'x';
- cout << array[x-1][y-1] << endl;
- for(int i = 0; i < 3; i++){
-   for(int j = 0; j < 3; j++){
-     cout << " " << array[i][j] << " ";
-   }
-   cout << endl;
- }
- cout << "-----------------------" << endl;  
-};
+}
+
+void playO(char array[3][3]){  
+ cout << "Please enter which row you want to place your move (1,2,3)" << endl;
+ char x = 0;
+ char y = 0;
+ cin >> x;
+ cout << "Please enter which column you want to place your move (a,b,c)" << endl;
+ cin >> y;
+ array[x-1][y-1] = 'o';
+}
 
 void reset(char array[3][3]){
   for(int i = 0; i < 3; i++){
