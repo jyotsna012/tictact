@@ -16,15 +16,17 @@ int main(){
     {'_','_','_'}
   
   };
-
- array[0][1] = 'a';
  
  char a = array[0][1];
-
- cout << a << endl;
  printBoard(array);
  
 };
+
+void resetBoard(){
+
+  char array[3][3] = {
+
+}
 
 void printBoard(char array[3][3]){
 
@@ -37,4 +39,10 @@ void printBoard(char array[3][3]){
   }
 
   return;
+}
+
+void addChar(){
+
+  
+
 }
