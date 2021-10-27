@@ -25,8 +25,8 @@ void reset(char array[3][3]){
 
   for(int i = 0; i < 3; i++){
     for(int j = 0; j < 3; j++){
+        array[i][j] = '_';
     }
-      array[i][j] = '_';
   }
 
 }
