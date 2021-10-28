@@ -60,11 +60,11 @@ void Input()
 	int x = (int)a;
 	int y;
 	if(b == 'a'){
-	 int y == 1;
+	 int y = 1;
 	} else if (b == 'b') {
-	 int y == 2;
+	 int y = 2;
 	} else if (b == 'c') {
-	 int y == 3;
+	 int y = 3;
 	}
 	
 	board[x-1][y-1] = player;
