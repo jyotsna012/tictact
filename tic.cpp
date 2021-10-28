@@ -6,9 +6,9 @@
 using namespace std;
 
 char board[3][3] = { 
-	{'1', '2', '3'}, 
-	{'4', '5', '6'},
-	{'7', '8', '9' }
+	{'_', '_', '_'}, 
+	{'_', '_', '_'},
+	{'_', '_', '_' }
 };
 char player = 'X';
 void Draw();
@@ -50,11 +50,16 @@ void Draw()
 }
 void Input()
 {
-	int a;
-	cout << "Press the number of the field: ";
+	char a;
+	char b:
+	cout << "Press the number of the row: ";
 	cin >> a;
+	cout << "Press the number of the column: ";
+	cin >> b;
+	
+	
 
-	if (a == 1)
+	/*if (a == 1)
 		board[0][0] = player;
 	else if (a == 2)
 		board[0][1] = player;
@@ -71,7 +76,7 @@ void Input()
 	else if (a == 8)
 		board[2][1] = player;
 	else if (a == 9)
-		board[2][2] = player;
+		board[2][2] = player;*/
 }
 void TogglePlayer()
 {
