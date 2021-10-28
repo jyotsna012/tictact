@@ -7,6 +7,32 @@ using namespace std;
 
 char board[3][3] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 char player = 'X';
+void Draw();
+void Input();
+void TogglePlayer();
+char Win();
+
+int main(){
+	Draw();
+	while (1)
+	{
+		Input();
+		Draw();
+		if (Win() == 'X')
+		{
+			cout << "X wins!" << endl;
+			break;
+		}
+		else if (Win() == 'O')
+		{
+			cout << "O wins!" << endl;
+			break;
+		}
+		TogglePlayer();
+	}
+	return 0;
+}
+
 void Draw()
 {
 	for (int i = 0; i < 3; i++)
@@ -94,26 +120,6 @@ char Win()
 
 	return '/';
 }
-int main()
-{
-	Draw();
-	while (1)
-	{
-		Input();
-		Draw();
-		if (Win() == 'X')
-		{
-			cout << "X wins!" << endl;
-			break;
-		}
-		else if (Win() == 'O')
-		{
-			cout << "O wins!" << endl;
-			break;
-		}
-		TogglePlayer();
-	}
-	return 0;
-}
+
 
 
