@@ -11,17 +11,17 @@ char board[3][3] = {
 	{'_', '_', '_' }
 };
 char player = 'X';
-void Draw();
+void printBoard();
 void Input();
 void TogglePlayer();
 char Win();
 
 int main(){
-	Draw();
+	printBoard();
 	while (1)
 	{
 		Input();
-		Draw();
+		printBoard();
 		if (Win() == 'X')
 		{
 			cout << "X wins!" << endl;
@@ -37,7 +37,7 @@ int main(){
 	return 0;
 }
 
-void Draw()
+void printBoard()
 {
 	for (int i = 0; i < 3; i++)
 	{
