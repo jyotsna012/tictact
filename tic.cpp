@@ -50,43 +50,31 @@ void Draw()
 }
 void Input()
 {
-	char a;
-	char b;
+	int a;
+	int b;
 	cout << "Press the number of the row: ";
 	cin >> a;
 	cout << "Press the number of the column: ";
 	cin >> b;
 	
-	int x = (int)a;
-	int y;
-	if(b == 'a'){
-	 int y = 1;
-	} else if (b == 'b') {
-	 int y = 2;
-	} else if (b == 'c') {
-	 int y = 3;
-	}
-	
-	board[x-1][y-1] = player;
-	
-	/*if (a == 1)
+	if (a == 1 && b == 1)
 		board[0][0] = player;
-	else if (a == 2)
+	else if (a == 1 && b == 2)
 		board[0][1] = player;
-	else if (a == 3)
+	else if (a == 1 && b == 3)
 		board[0][2] = player;
-	else if (a == 4)
+	else if (a == 2 && b == 1)
 		board[1][0] = player;
-	else if (a == 5)
+	else if (a == 2 && b == 2)
 		board[1][1] = player;
-	else if (a == 6)
+	else if (a == 2 && b == 3)
 		board[1][2] = player;
-	else if (a == 7)
+	else if (a == 3 && b == 1)
 		board[2][0] = player;
-	else if (a == 8)
+	else if (a == 3 && b == 2)
 		board[2][1] = player;
-	else if (a == 9)
-		board[2][2] = player;*/
+	else if (a == 3 && b == 3)
+		board[2][2] = player;
 }
 void TogglePlayer()
 {
