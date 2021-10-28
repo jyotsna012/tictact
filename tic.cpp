@@ -57,8 +57,18 @@ void Input()
 	cout << "Press the number of the column: ";
 	cin >> b;
 	
+	int x = (int)a;
+	int y;
+	if(b == 'a'){
+	 int y == 1;
+	} else if (b == 'b') {
+	 int y == 2;
+	} else if (b == 'c') {
+	 int y == 3;
+	}
 	
-
+	board[x-1][y-1] = player;
+	
 	/*if (a == 1)
 		board[0][0] = player;
 	else if (a == 2)
