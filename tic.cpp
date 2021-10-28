@@ -51,7 +51,7 @@ void Draw()
 void Input()
 {
 	char a;
-	char b:
+	char b;
 	cout << "Press the number of the row: ";
 	cin >> a;
 	cout << "Press the number of the column: ";
