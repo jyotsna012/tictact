@@ -78,6 +78,7 @@ int main(){
 				TogglePlayer();
 			}
 			score(scores);
+			cout << "here are the scores: X: " << xScores << " & O: " << yScores << " & Tie: " << tScores << endl;
 		} else {
 			cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
 	  		return 0;
