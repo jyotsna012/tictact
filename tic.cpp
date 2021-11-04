@@ -75,7 +75,7 @@ int main(){
 	score(scores);
 	} else {
 	
-		cout << "thanks for playing! here are the scores: X: " << xScore << " & O: " << yScore << endl;
+		cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
 	
 	}
 }
