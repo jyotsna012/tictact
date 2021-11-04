@@ -58,7 +58,7 @@ void Input()
 	cin >> b;
 	
 	if (a == 1 && b == 1) {
-		if (board[0][0] = '_') {
+		if (board[0][0] == '_') {
 		board[0][0] = player;
 		}
 	}
