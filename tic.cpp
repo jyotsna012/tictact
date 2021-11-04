@@ -10,6 +10,11 @@ char board[3][3] = {
 	{'_', '_', '_'},
 	{'_', '_', '_' }
 };
+int counts = 0;
+int scores = 1;
+int xScores = 0;
+int yScores = 0;
+int tScores = 0;
 char player = 'X';
 void printBoard();
 void Input();
@@ -18,17 +23,32 @@ void resetBoard();
 int count(int & c);
 int score(int & s);
 char Win();
-int counts = 0;
-int scores = 1;
+int xScore(int & a);
+int yScore(int & b);
+int tScore(int & b);
 
-int score(int & s){
+int xScore(int & a){
+	a = a+1;
+	return a;
+}
+
+int yScore(int & b){
+	b = b+1;
+	return b;
+}
+
+int xScore(int & s){
     s = s+1;
     return s;
 }
 
 int main(){
+	char choice;
+	cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
 	resetBoard();
-	cout << "this is your" << scores << "round" << endl;
+	cout << "this is your " << scores << " round" << endl;
+	cin >> choice;
+	if(choice == 'y'){
 	while (1)
 	{
 		Input();
@@ -36,19 +56,28 @@ int main(){
 		if (Win() == 'X')
 		{
 			cout << "X wins!" << endl;
+			xScore(xScores);
 			break;
 		}
 		else if (Win() == 'O')
 		{
 			cout << "O wins!" << endl;
+			yScore(yScores);
 			break;
 		} else if (counts == 9 && Win() == 'n'){
 			cout << "Tie!" << endl;
+			tScore(tScores);
 			return 0;
 		}
 		TogglePlayer();
 	}
 	return 0;
+	score(scores);
+	} else {
+	
+		cout << "thanks for playing! here are the scores: X: " << xScore << " & O: " << yScore << endl;
+	
+	}
 }
 
 int count(int & c){
