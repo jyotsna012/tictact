@@ -59,7 +59,7 @@ int main(){
 		}
 		TogglePlayer();
 	}
-	//return 0;
+	ihu = 0;
 	score(scores);
 	} 
 	}
