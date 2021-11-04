@@ -37,7 +37,7 @@ int yScore(int & b){
 	return b;
 }
 
-int xScore(int & s){
+int tScore(int & s){
     s = s+1;
     return s;
 }
