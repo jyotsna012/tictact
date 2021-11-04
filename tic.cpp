@@ -60,6 +60,9 @@ void Input()
 	if (a == 1 && b == 1) {
 		if (board[0][0] == '_') {
 		board[0][0] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
 		}
 	}
 	else if (a == 1 && b == 2){
