@@ -70,7 +70,8 @@ int main(){
 				}
 				TogglePlayer();
 			}
-			score(scores);
+			cout << "hi" << endl;
+			//score(scores);
 		} else {
 			cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
 	  		return 0;
