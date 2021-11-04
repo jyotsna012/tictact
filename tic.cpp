@@ -43,7 +43,7 @@ int main(){
 }
 
 int count(int & c){
-	int c = c + 1;
+	c = c + 1;
 	return c;
 } 
 
