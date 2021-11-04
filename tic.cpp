@@ -53,10 +53,10 @@ int main(){
 		counts = 0;
 		char choice;
 		cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
-		cout << "this is your " << scores << " round" << endl;
 		cin >> choice;
 	
 		if(choice == 'y'){
+			cout << "this is your " << scores << " round" << endl;
 			resetBoard();
 			while (1){
 				Input();
