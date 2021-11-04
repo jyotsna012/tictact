@@ -81,6 +81,10 @@ void Input()
 		board[2][1] = player;}
 	else if (a == 3 && b == 3){
 		board[2][2] = player;}
+	else if{
+		cout << "entry not valid. try again" << endl;
+		TogglePlayer();
+	}
 }
 void TogglePlayer()
 {
