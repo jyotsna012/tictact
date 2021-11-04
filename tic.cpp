@@ -57,8 +57,11 @@ void Input()
 	cout << "Press the number of the column: ";
 	cin >> b;
 	
-	if (a == 1 && b == 1){
-		board[0][0] = player;}
+	if (a == 1 && b == 1) {
+		if (board[0][0] = '_') {
+		board[0][0] = player;
+		}
+	}
 	else if (a == 1 && b == 2){
 		board[0][1] = player;}
 	else if (a == 1 && b == 3){
