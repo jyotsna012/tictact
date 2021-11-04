@@ -76,7 +76,7 @@ void resetBoard(){
 	{
 		for (int j = 0; j < 3; j++)
 		{
-			board[i] = '_';
+			board[i][j] = '_';
 			cout << board[i][j] << " ";
 		}
 		cout << endl;
