@@ -14,12 +14,21 @@ char player = 'X';
 void printBoard();
 void Input();
 void TogglePlayer();
+void resetBoard();
 int count(int & c);
+int score(int & s);
 char Win();
 int counts = 0;
+int scores = 1;
+
+int score(int & s){
+    s = s+1;
+    return s;
+}
 
 int main(){
-	printBoard();
+	resetBoard();
+	cout << "this is your" << scores << "round" << endl;
 	while (1)
 	{
 		Input();
@@ -49,6 +58,24 @@ int count(int & c){
 
 void printBoard()
 {
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << board[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+void resetBoard(){
+	
+	board[3][3] = { 
+	{'_', '_', '_'}, 
+	{'_', '_', '_'},
+	{'_', '_', '_' }
+	};
+	
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
