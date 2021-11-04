@@ -33,7 +33,7 @@ int main(){
 		{
 			cout << "O wins!" << endl;
 			break;
-		} else if (c == 9 && Win() == 'n'){
+		} else if (counts == 9 && Win() == 'n'){
 			cout << "Tie!" << endl;
 			return 0;
 		}
