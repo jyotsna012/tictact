@@ -31,6 +31,8 @@ int main(){
 		{
 			cout << "O wins!" << endl;
 			break;
+		} else{
+			cout << "Tie!" << endl;
 		}
 		TogglePlayer();
 	}
@@ -52,9 +54,9 @@ void Input()
 {
 	int a;
 	int b;
-	cout << "Press the number of the row: ";
+	cout << "Enter the number of the row you would like to place your marker: ";
 	cin >> a;
-	cout << "Press the number of the column: ";
+	cout << "Enter the number of the column you would like to place your marker: ";
 	cin >> b;
 	
 	if (a == 1 && b == 1) {
@@ -66,21 +68,69 @@ void Input()
 		}
 	}
 	else if (a == 1 && b == 2){
-		board[0][1] = player;}
+		if (board[0][1] == '_') {
+		board[0][1] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 1 && b == 3){
-		board[0][2] = player;}
+		if (board[0][2] == '_') {
+		board[0][2] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 2 && b == 1){
-		board[1][0] = player;}
+		if (board[1][0] == '_') {
+		board[1][0] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 2 && b == 2){
-		board[1][1] = player;}
+		if (board[1][1] == '_') {
+		board[1][1] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 2 && b == 3){
-		board[1][2] = player;}
+		if (board[1][2] == '_') {
+		board[1][2] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 3 && b == 1){
-		board[2][0] = player;}
+		if (board[2][0] == '_') {
+		board[2][0] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 3 && b == 2){
-		board[2][1] = player;}
+		if (board[2][1] == '_') {
+		board[2][1] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else if (a == 3 && b == 3){
-		board[2][2] = player;}
+		if (board[2][2] == '_') {
+		board[2][2] = player;
+		} else {
+		  TogglePlayer();
+		  cout << "space already taken. enter new space" << endl;
+		}
+	}
 	else{
 		cout << "entry not valid. try again" << endl;
 		TogglePlayer();
@@ -135,7 +185,7 @@ char Win()
 	if (board[2][0] == 'O' && board[1][1] == 'O' && board[0][2] == 'O')
 		return 'O';
 
-	return '/';
+	return 'n';
 }
 
 
