@@ -32,6 +32,11 @@ int xScore(int & a){
 	return a;
 }
 
+int score(int & s){
+	s = s+1;
+	return s;
+}
+
 int yScore(int & b){
 	b = b+1;
 	return b;
@@ -71,7 +76,7 @@ int main(){
 				TogglePlayer();
 			}
 			cout << "hi" << endl;
-			//score(scores);
+			score(scores);
 		} else {
 			cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
 	  		return 0;
