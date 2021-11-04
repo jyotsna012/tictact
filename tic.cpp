@@ -50,7 +50,7 @@ int tScore(int & s){
 int main(){
 	while(1){
 		player = 'X';
-		count = 0;
+		counts = 0;
 		char choice;
 		cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
 		cout << "this is your " << scores << " round" << endl;
