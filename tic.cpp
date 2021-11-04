@@ -80,7 +80,7 @@ int main(){
 			score(scores);
 			cout << "here are the scores: X: " << xScores << " & O: " << yScores << " & Tie: " << tScores << endl;
 		} else {
-			cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
+			cout << "thanks for playing!" << endl;
 	  		return 0;
 		}
 	}
