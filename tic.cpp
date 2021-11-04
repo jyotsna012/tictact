@@ -70,16 +70,13 @@ void printBoard()
 
 void resetBoard(){
 	
-	board[3][3] = { 
-		{'_', '_', '_'}, 
-		{'_', '_', '_'},
-		{'_', '_', '_'}
-	}
+	
 	
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
+			board[i] = '_';
 			cout << board[i][j] << " ";
 		}
 		cout << endl;
