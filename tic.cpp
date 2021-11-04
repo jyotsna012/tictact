@@ -36,6 +36,7 @@ int main(){
 	cout << "this is your " << scores << " round" << endl;
 	cin >> choice;
 	if(choice == 'y'){
+	int ihu = 1;
 	while (1)
 	{
 		Input();
@@ -44,21 +45,21 @@ int main(){
 		{
 			cout << "X wins!" << endl;
 			xScore(xScores);
-			break;
+			ihu = 0;
 		}
 		else if (Win() == 'O')
 		{
 			cout << "O wins!" << endl;
 			yScore(yScores);
-			break;
+			ihu =0;
 		} else if (counts == 9 && Win() == 'n'){
 			cout << "Tie!" << endl;
 			tScore(tScores);
-			return 0;
+			ihu = 0;
 		}
 		TogglePlayer();
 	}
-	return 0;
+	//return 0;
 	score(scores);
 	} 
 	}
