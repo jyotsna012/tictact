@@ -43,10 +43,13 @@ int tScore(int & s){
 }
 
 int main(){
+	while(1){
+	
 	char choice;
 	cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
 	cout << "this is your " << scores << " round" << endl;
 	cin >> choice;
+	
 	if(choice == 'y'){
 	resetBoard();
 	while (1)
@@ -74,9 +77,9 @@ int main(){
 	return 0;
 	score(scores);
 	} else {
-	
-		cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
-	
+	  cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores << " Tie: " << tScores << endl;
+	  return 0;
+	}
 	}
 }
 
