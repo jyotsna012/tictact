@@ -27,22 +27,9 @@ int xScore(int & a);
 int yScore(int & b);
 int tScore(int & b);
 
-int xScore(int & a){
-	a = a+1;
-	return a;
-}
-
-int yScore(int & b){
-	b = b+1;
-	return b;
-}
-
-int tScore(int & s){
-    s = s+1;
-    return s;
-}
-
 int main(){
+	int stop = 5;
+	while(stop == 5){
 	char choice;
 	cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
 	resetBoard();
@@ -75,7 +62,24 @@ int main(){
 	score(scores);
 	} else {
 		cout << "thanks for playing! here are the scores: X: " << xScores << " & O: " << yScores <<  " Tie: " << tScores << endl;
+		stop = 1;
 	}
+	}
+}
+
+int xScore(int & a){
+	a = a+1;
+	return a;
+}
+
+int yScore(int & b){
+	b = b+1;
+	return b;
+}
+
+int tScore(int & s){
+    s = s+1;
+    return s;
 }
 
 int count(int & c){
