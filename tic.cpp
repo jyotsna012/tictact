@@ -22,7 +22,7 @@ void TogglePlayer();
 void resetBoard();
 int count(int & c);
 int score(int & s);
-char Win();
+char checkWin();
 int xScore(int & a);
 int yScore(int & b);
 int tScore(int & b);
@@ -61,16 +61,16 @@ int main(){
 			while (1){
 				Input();
 				printBoard();
-				if (Win() == 'X'){
+				if (checkWin() == 'X'){
 					cout << "X wins!" << endl;
 					xScore(xScores);
 					break;
 					}
-				else if (Win() == 'O'){
+				else if (checkWin() == 'O'){
 					cout << "O wins!" << endl;
 					yScore(yScores);
 					break;
-				} else if (counts == 9 && Win() == 'n'){
+				} else if (counts == 9 && checkWin() == 'n'){
 					cout << "Tie!" << endl;
 					tScore(tScores);
 					break;
@@ -219,7 +219,7 @@ void TogglePlayer()
 	else
 		player = 'X';
 }
-char Win()
+char checkWin()
 {
 	if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X'){
 		return 'X';}
@@ -227,37 +227,32 @@ char Win()
 		return 'X';}
 	if (board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == 'X'){
 		return 'X';}
-
 	if (board[0][0] == 'X' && board[1][0] == 'X' && board[2][0] == 'X'){
 		return 'X';}
 	if (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X'){
 		return 'X';}
 	if (board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == 'X'){
 		return 'X';}
-
 	if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X'){
 		return 'X';}
 	if (board[2][0] == 'X' && board[1][1] == 'X' && board[0][2] == 'X'){
 		return 'X';}
-
 	if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O'){
 		return 'O';}
 	if (board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O'){
 		return 'O';}
 	if (board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == 'O'){
 		return 'O';}
-
 	if (board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == 'O'){
 		return 'O';}
 	if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O'){
 		return 'O';}
 	if (board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == 'O'){
 		return 'O';}
-
 	if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O'){
 		return 'O';}
 	if (board[2][0] == 'O' && board[1][1] == 'O' && board[0][2] == 'O'){
 		return 'O';}
-
-	return 'n';
+	else{
+		return 'n';}
 }
