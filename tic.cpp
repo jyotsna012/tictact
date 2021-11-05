@@ -65,62 +65,6 @@ int tScore(int & s){
     return s;
 }
 
-int main(){
-	//creates a while loop so the game can be played over and over
-	while(1){
-		//on the first round of every game, the player starts at X and counts is reset to zero.
-		player = 'X';
-		counts = 0;
-		
-		//asks the player if they want to play
-		char choice;
-		cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
-		cin >> choice;
-	
-		//if player wants to plat the following happenens
-		if(choice == 'y'){
-			//the round number is displayed
-			cout << "this is your " << scores << " round" << endl;
-			//the board is cleared
-			resetBoard();
-			//there is a while loop so until a win or tie occurs the players will have a chance to enter a keep entering moves
-			while (1){
-				//function that lets player enter a move and places marker on the board
-				Input();
-				//reprints the board with the new move
-				printBoard();
-				//if x wins, it will be displayed, the xScore will be increased, the loop will break
-				if (checkWin() == 'X'){
-					cout << "X wins!" << endl;
-					xScore(xScores);
-					break;
-					}
-				//if o wins, it will be displayed, the yScore will be increased, the loop will break
-				else if (checkWin() == 'O'){
-					cout << "O wins!" << endl;
-					yScore(yScores);
-					break;
-				//if after 9 turns, there is no win, tie will be displayed, the tScore will be increased, the loop will break
-				} else if (counts == 9 && checkWin() == 'n'){
-					cout << "Tie!" << endl;
-					tScore(tScores);
-					break;
-				}
-				//each time the player switches
-				TogglePlayer();
-			}
-			//the round number increases
-			score(scores);
-			//scores are displayed
-			cout << "here are the scores: X: " << xScores << " & O: " << yScores << " & Tie: " << tScores << endl;
-		//if player does not want to play again thank you will be displayed and while loop will break
-		} else {
-			cout << "thanks for playing!" << endl;
-	  		return 0;
-		}
-	}
-}
-
 //function to increase count
 int count(int & c){
 	c = c + 1;
@@ -300,4 +244,60 @@ char checkWin()
 		return 'O';}
 	else{
 		return 'n';}
+}
+
+int main(){
+	//creates a while loop so the game can be played over and over
+	while(1){
+		//on the first round of every game, the player starts at X and counts is reset to zero.
+		player = 'X';
+		counts = 0;
+		
+		//asks the player if they want to play
+		char choice;
+		cout << "Would you like to play Tic Tac Toe. If yes enter y. If no enter n" << endl;
+		cin >> choice;
+	
+		//if player wants to plat the following happenens
+		if(choice == 'y'){
+			//the round number is displayed
+			cout << "this is your " << scores << " round" << endl;
+			//the board is cleared
+			resetBoard();
+			//there is a while loop so until a win or tie occurs the players will have a chance to enter a keep entering moves
+			while (1){
+				//function that lets player enter a move and places marker on the board
+				Input();
+				//reprints the board with the new move
+				printBoard();
+				//if x wins, it will be displayed, the xScore will be increased, the loop will break
+				if (checkWin() == 'X'){
+					cout << "X wins!" << endl;
+					xScore(xScores);
+					break;
+					}
+				//if o wins, it will be displayed, the yScore will be increased, the loop will break
+				else if (checkWin() == 'O'){
+					cout << "O wins!" << endl;
+					yScore(yScores);
+					break;
+				//if after 9 turns, there is no win, tie will be displayed, the tScore will be increased, the loop will break
+				} else if (counts == 9 && checkWin() == 'n'){
+					cout << "Tie!" << endl;
+					tScore(tScores);
+					break;
+				}
+				//each time the player switches
+				TogglePlayer();
+			}
+			//the round number increases
+			score(scores);
+			//scores are displayed
+			cout << "here are the scores: X: " << xScores << " & O: " << yScores << " & Tie: " << tScores << endl;
+		//if player does not want to play again thank you will be displayed and while loop will break
+		} else {
+			cout << "thanks for playing!" << endl;
+	  		return 0;
+		}
+	}
 }
